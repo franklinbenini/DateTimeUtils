@@ -65,26 +65,3 @@ function isDataMaiorQueHoje(data)
     dataHoje.setHours(23,59,59,999);    
     return data.getTime() > dataHoje.getTime();
 }
-
-///////////////////// ABAIXO TESTES DAS FUNÇÕES /////////////////
-
-var d = new Date(2018,1,22);
-var n = mesTexto(d);
-
-var divTeste = document.getElementById('divTeste')
-
-
-divTeste.innerHTML +=  d + " <br>";
-divTeste.innerHTML += "Olá " + n;
-divTeste.innerHTML += "<br>Outra linha " + adicionaDias(d, 364);
-
-var e = new Date(2019, 4, 22, 15,55,01);
-var f = new Date(2019, 4, 22, 15,55,01);
-divTeste.innerHTML += "<br>teste Hora " + adicionaHoras(e, 3);
-
-divTeste.innerHTML += "<br> teste locale " + d.toLocaleDateString();
-divTeste.innerHTML += "<br> teste formatada " + dataFormatada(d);
-divTeste.innerHTML += "<br> data comparação " + comparaData(e);
-divTeste.innerHTML += "<br> is Maior que Hoje " + isDataMaiorQueHoje(e);
-
-
